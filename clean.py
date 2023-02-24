@@ -17,5 +17,7 @@ df1=df.dropna(axis=0,how='any')
 mask=df1['job'].str.contains('insurance',case=False,regex=False)
 df2=df1[~mask]
 
+print(df2.shape)
+
 df2.to_csv(output_file,index=False)
 
